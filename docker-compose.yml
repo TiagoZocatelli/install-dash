@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: dashboard
+    ports:
+      - "9023:9023"  # Mapeia a porta 9023 do container para a mesma porta no host
+    network_mode: "host"  # Usa o modo de rede host para permitir acesso externo
